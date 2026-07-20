@@ -223,6 +223,13 @@
   .notify input{flex:1;background:rgba(0,0,0,.4);border:1px solid var(--line2);color:#fff;border-radius:999px;padding:13px 18px;font-size:15px;outline:none}
   .notify input:focus{border-color:rgba(255,255,255,.45)}
   .notify .btn-primary{white-space:nowrap}
+  .contact-form{display:grid;gap:12px;max-width:520px;margin:30px auto 0;text-align:left;position:relative}
+  .contact-form input,.contact-form textarea{width:100%;background:rgba(0,0,0,.4);border:1px solid var(--line2);color:#fff;border-radius:14px;padding:13px 18px;font-size:15px;outline:none;font-family:inherit}
+  .contact-form textarea{resize:vertical;min-height:120px}
+  .contact-form input:focus,.contact-form textarea:focus{border-color:rgba(255,255,255,.45)}
+  .contact-form button{width:100%;justify-content:center;margin-top:2px}
+  .form-ok{display:none;margin:26px auto 0;max-width:520px;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.35);color:#4ade80;border-radius:14px;padding:14px 18px;font-size:15px;position:relative}
+  .form-ok.show{display:block}
   .badge-soon{display:inline-flex;gap:9px;align-items:center;margin-top:26px;color:var(--muted);font-size:13.5px;border:1px solid var(--line2);border-radius:999px;padding:9px 16px;position:relative}
 
   /* footer */
@@ -448,7 +455,7 @@
       <a href="support.html">Support</a>
     </nav>
     <div class="nav-cta">
-      <a class="btn btn-primary" href="#notify">Get early access</a>
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Get the App</a>
       <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display=(this.dataset.o=='1'?(this.dataset.o='0','none'):(this.dataset.o='1','flex')),document.querySelector('.nav-links').style.position='absolute',document.querySelector('.nav-links').style.top='64px',document.querySelector('.nav-links').style.right='24px',document.querySelector('.nav-links').style.flexDirection='column',document.querySelector('.nav-links').style.background='var(--surface)',document.querySelector('.nav-links').style.padding='18px 22px',document.querySelector('.nav-links').style.borderRadius='14px',document.querySelector('.nav-links').style.border='1px solid var(--line)'">☰</button>
     </div>
   </div>
@@ -462,15 +469,17 @@
   <span class="spark" style="width:18px;height:18px;left:9%;bottom:24%"></span>
   <span class="spark" style="width:11px;height:11px;right:11%;bottom:30%"></span>
   <div class="wrap">
-    <span class="badge"><span class="dotlive"></span> Coming soon to the App Store</span>
+    <span class="badge"><span class="dotlive"></span> Now available on the App Store</span>
     <h1>Imagine it. <span class="shimmer">Vibeo makes it.</span></h1>
  <p class="sub">Describe a vibe and get a finished song - vocals, lyrics, and cover art - in seconds. Then put your own face in a music video that performs it. No instruments, no editing, no experience.</p>
+    <div style="margin-top:30px"><a class="btn btn-primary btn-lg" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download on the App Store</a></div>
+    <div class="trust" style="margin-top:14px;color:var(--muted);font-size:13.5px">Free to download · iPhone · iOS 17 or later</div>
   </div>
 
   <div class="wavehero">
     <div class="glowpad"></div>
     <div class="wavebars" id="wavebars"></div>
-    <a class="wave-cta" id="heroStart" href="#notify">▶&nbsp; Start creating</a>
+    <a class="wave-cta" id="heroStart" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222">▶&nbsp; See it in action</a>
   </div>
   <div class="trust" style="margin-top:22px"><a href="#features" style="color:var(--muted)">See everything it does ↓</a></div>
 </div>
@@ -760,7 +769,7 @@
         <ul><li>~18 full songs a month</li><li>Everything in Plus</li><li>Most AI videos</li><li>Best value per credit</li></ul>
       </div>
     </div>
-    <p class="price-note">Need more? Top-up credit packs available any time. Final pricing confirmed at launch.</p>
+    <p class="price-note">Need more? Top-up credit packs available any time. Manage or cancel your plan anytime in your App Store account settings.</p>
   </div>
 </section>
 
@@ -774,24 +783,33 @@
  <details><summary>What can I do in the AI Video feature?<span class="plus">+</span></summary><p>Two modes. Photo turns a single selfie into a video of you singing your song. Scene drops your face into an example clip and lip-syncs it to your track - great for recreating a performance with you in it.</p></details>
       <details><summary>Can I use my own voice?<span class="plus">+</span></summary><p>Yes. Record a short sample once and Vibeo can re-sing your songs in your own voice, keeping the original instrumental.</p></details>
       <details><summary>Do I own what I make?<span class="plus">+</span></summary><p>Everything you create stays in your library and is yours to keep and download. Use your own or properly licensed footage for Scene videos.</p></details>
-      <details><summary>When is it launching?<span class="plus">+</span></summary><p>Vibeo is in final testing for the App Store. Drop your email below and you'll be first to know the day it goes live.</p></details>
+      <details><summary>How do I get Vibeo?<span class="plus">+</span></summary><p>Vibeo is available now on the App Store. It's free to download and requires an iPhone running iOS 17 or later. <a href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download it here</a> and start creating in seconds.</p></details>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section id="notify">
+<!-- CONTACT -->
+<section id="contact">
   <div class="wrap">
     <div class="cta-band reveal">
-      <h2>Be first to make a song with Vibeo.</h2>
-      <p>Join the early-access list and we'll email you the moment it hits the App Store.</p>
-      <form class="notify" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="setTimeout(()=>{this.querySelector('input[type=email]').value='';this.querySelector('button').textContent='Thanks! ✓'},10)">
-        <input type="hidden" name="form-name" value="waitlist" />
-        <p style="display:none"><label>Don't fill: <input name="bot-field" /></label></p>
+      <h2>Questions? Get in touch.</h2>
+      <p>Need a hand, hit a problem, or have an idea for what we should build next? Send us a message - we read every one and usually reply within 1-2 business days.</p>
+
+      <div class="form-ok" id="formOk">Thanks - your message is on its way. We'll get back to you within 1-2 business days.</div>
+
+      <form class="contact-form" action="https://formsubmit.co/stevierangel2033@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New contact message from vibeo.ink" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value="https://vibeo.ink/?sent=1#contact" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="you@email.com" required />
-        <button class="btn btn-primary" type="submit">Notify me</button>
+        <textarea name="message" placeholder="How can we help?" required></textarea>
+        <button class="btn btn-primary" type="submit">Send message</button>
       </form>
-      <div class="badge-soon"><span class="dotlive" style="width:7px;height:7px;border-radius:50%;background:#4ade80"></span> Coming soon to the App Store</div>
+
+      <div class="badge-soon">Prefer email? <a href="mailto:support@vibeo.ink" style="color:inherit">support@vibeo.ink</a></div>
     </div>
   </div>
 </section>
@@ -809,8 +827,8 @@
       </div>
       <div class="foot-links">
         <div class="foot-col"><h5>Product</h5><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></div>
-        <div class="foot-col"><h5>Company</h5><a href="support.html">Support</a><a href="support.html#contact">Contact</a><a href="support.html#privacy">Privacy</a></div>
-        <div class="foot-col"><h5>Get the app</h5><a href="#notify">Early access</a><a href="#notify">Join waitlist</a></div>
+        <div class="foot-col"><h5>Company</h5><a href="support.html">Support</a><a href="#contact">Contact</a><a href="/privacy">Privacy</a></div>
+        <div class="foot-col"><h5>Get the app</h5><a href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener">Download on the App Store</a><a href="#contact">Contact us</a></div>
       </div>
     </div>
     <div class="copyright"><span>© 2026 Vibeo. All rights reserved.</span><span>vibeo.ink</span></div>
@@ -870,7 +888,7 @@
     <div class="dp-vignette"></div>
     <div class="dp-final-cta" id="dpFinalCta">
       <div class="dp-final-t">From a thought to the main stage.</div>
-      <a class="btn btn-primary btn-lg" href="#notify" id="dpReal">Start creating for real</a>
+      <a class="btn btn-primary btn-lg" href="https://apps.apple.com/us/app/vibeo-ai-music/id6785634222" target="_blank" rel="noopener" id="dpReal">Download Vibeo free</a>
     </div>
   </div>
 </div>
@@ -964,6 +982,16 @@
     $('dpReal').addEventListener('click',close);
     document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&dp.classList.contains('open'))close(); });
     const hs=document.getElementById('heroStart'); if(hs) hs.addEventListener('click',e=>{ e.preventDefault(); open(); });
+  })();
+
+  // contact form: show confirmation after FormSubmit redirects back with ?sent=1
+  (function(){
+    if(!/[?&]sent=1/.test(location.search)) return;
+    const ok=document.getElementById('formOk'); if(!ok) return;
+    ok.classList.add('show');
+    const f=document.querySelector('.contact-form'); if(f) f.reset();
+    setTimeout(()=>{ document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'center'}); },300);
+    if(history.replaceState) history.replaceState(null,'',location.pathname+'#contact');
   })();
 
   // auto-cycling photo -> song -> video demo
